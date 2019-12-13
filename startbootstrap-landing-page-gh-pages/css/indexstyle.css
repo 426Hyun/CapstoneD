@@ -1,0 +1,18 @@
+body{
+   
+}
+#SIDEMENU{
+    margin: 0px;
+    padding: 0px;
+    /* 오른쪽위에 있게하기 */
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+
+#bot {
+	position: fixed;
+	bottom: 30px;
+	right: 10px;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>강원 꿈자람 카드 서비스::가맹점 안내</title>
+
+  <!-- sidemenu & chatbot CSS -->
+  <link href="css/indexstyle.css" rel="stylesheet" type="text/css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/landing-page.min.css" rel="stylesheet">
+
+  <!-- sidemenu -->
+  <script type="text/javascript">
+    var stmnLEFT = 10; // 오른쪽 여백
+    var stmnGAP1 = 0; // 위쪽 여백
+    var stmnGAP2 = 400; // 스크롤시 브라우저 위쪽과 떨어지는 거리
+    var stmnBASE = 400; // 스크롤 시작위치
+    var stmnActivateSpeed = 20; //스크롤을 인식하는 딜레이 (숫자가 클수록 느리게 인식)
+    var stmnScrollSpeed = 10; //스크롤 속도 (클수록 느림)
+    var stmnTimer;
+
+    function RefreshStaticMenu() {
+     var stmnStartPoint, stmnEndPoint;
+     stmnStartPoint = parseInt(document.getElementById('SIDEMENU').style.top, 10);
+     stmnEndPoint = Math.max(document.documentElement.scrollTop, document.body.scrollTop) + stmnGAP2;
+     if (stmnEndPoint < stmnGAP1) stmnEndPoint = stmnGAP1;
+     if (stmnStartPoint != stmnEndPoint) {
+      stmnScrollAmount = Math.ceil( Math.abs( stmnEndPoint - stmnStartPoint ) / 15 );
+      document.getElementById('SIDEMENU').style.top = parseInt(document.getElementById('SIDEMENU').style.top, 10) + ( ( stmnEndPoint<stmnStartPoint ) ? -stmnScrollAmount : stmnScrollAmount ) + 'px';
+      stmnRefreshTimer = stmnScrollSpeed;
+      }
+     stmnTimer = setTimeout("RefreshStaticMenu();", stmnActivateSpeed);
+     }
+    function InitializeStaticMenu() {
+     document.getElementById('SIDEMENU').style.right = stmnLEFT + 'px';  //처음에 오른쪽에 위치.
+     document.getElementById('SIDEMENU').style.top = document.body.scrollTop + stmnBASE + 'px';
+     RefreshStaticMenu();
+     }
+   </script>
+
+</head>
+
+<body onload="InitializeStaticMenu();">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="img/header-home.png" alt="home" ></a>
+      <a class="navbar-brand" href="#">꿈자람 카드</a>
+      <a class="navbar-brand" href="https://www.purmeecard.com" target="blank">잔액조회</a>
+      <a class="navbar-brand" href="info1.html">가맹점 안내</a>
+      <a class="navbar-brand" href="info2.html">상담 센터</a>
+      <a class="navbar-brand" href="https://forms.gle/kwmZWS4dqB4x4UDj9" target="blank">문의하기</a>
+      <a class="btn btn-primary" href="#">Sign In</a>
+    </div>
+  </nav>
+
+  <div class="snb_nav">
+      <div class="snb">
+          <div class="dep1">
+              <h2>가맹점안내</h2>
+          </div>
+      </div>
+  </div>
+
+<section class="testimonials text-center bg-light">
+  <div id=container>
+    <h1>다음지도자리</h1>
+    <script type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b8e7c31279940fb5b34f09073a0b3363"></script>
+    <script>
+      var container = document.getElementById('center');
+      var options = {
+        center : new daum.maps.LatLng(36.2784197, 127.8393647),
+        level : 13
+      };
+
+      var map = new daum.maps.Map(container, options);
+      var marker = new daum.maps.Marker({
+        position : map.getCenter()
+      });
+      marker.setMap(map);
+    </script>
+    <script type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing">
+    </script>
+  </div>
+  <iframe name="merchant" frameborder="0" width="990" height="600" scrolling="no" src="https://www.purmeecard.com/public.do?request=merchantSelect">
+  </iframe>
+</section>
+
+<!-- Side -->
+<div id=SIDEMENU>
+  <a href=#><img src="img/top.png" alt="sidemenu" ></a>
+</div>
+<div id=bot>
+  <a href="#" onclick="window.open('chatbot.html','윈도우판업','width=500, height=550, left=400, top=100')"><img src="img/chatbot.png" ></a>
+</div>
+
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

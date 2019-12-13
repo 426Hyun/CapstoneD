@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>강원 꿈자람 카드 서비스</title>
+
+  <!-- sidemenu & chatbot CSS -->
+  <link href="css/indexstyle.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/landing-page.min.css" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js">
+  </script>
+
+  <!-- sidemenu -->
+  <script type="text/javascript">
+    var stmnLEFT = 10; // 오른쪽 여백
+    var stmnGAP1 = 0; // 위쪽 여백
+    var stmnGAP2 = 400; // 스크롤시 브라우저 위쪽과 떨어지는 거리
+    var stmnBASE = 400; // 스크롤 시작위치
+    var stmnActivateSpeed = 20; //스크롤을 인식하는 딜레이 (숫자가 클수록 느리게 인식)
+    var stmnScrollSpeed = 10; //스크롤 속도 (클수록 느림)
+    var stmnTimer;
+
+    function RefreshStaticMenu() {
+     var stmnStartPoint, stmnEndPoint;
+     stmnStartPoint = parseInt(document.getElementById('SIDEMENU').style.top, 10);
+     stmnEndPoint = Math.max(document.documentElement.scrollTop, document.body.scrollTop) + stmnGAP2;
+     if (stmnEndPoint < stmnGAP1) stmnEndPoint = stmnGAP1;
+     if (stmnStartPoint != stmnEndPoint) {
+      stmnScrollAmount = Math.ceil( Math.abs( stmnEndPoint - stmnStartPoint ) / 15 );
+      document.getElementById('SIDEMENU').style.top = parseInt(document.getElementById('SIDEMENU').style.top, 10) + ( ( stmnEndPoint<stmnStartPoint ) ? -stmnScrollAmount : stmnScrollAmount ) + 'px';
+      stmnRefreshTimer = stmnScrollSpeed;
+      }
+     stmnTimer = setTimeout("RefreshStaticMenu();", stmnActivateSpeed);
+     }
+    function InitializeStaticMenu() {
+     document.getElementById('SIDEMENU').style.right = stmnLEFT + 'px';  //처음에 오른쪽에 위치.
+     document.getElementById('SIDEMENU').style.top = document.body.scrollTop + stmnBASE + 'px';
+     RefreshStaticMenu();
+     }
+   </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148404063-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-148404063-1');
+  </script>
+
+
+</head>
+
+<body onload="InitializeStaticMenu();">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="img/header-home.png" alt="home" ></a>
+      <a class="navbar-brand" href="qrReader.html">꿈자람 카드</a>
+      <a class="navbar-brand" href="https://www.purmeecard.com" target="blank">잔액조회</a>
+      <a class="navbar-brand" href="info1.html">가맹점 안내</a>
+      <a class="navbar-brand" href="info2.html">상담 센터</a>
+      <a class="navbar-brand" href="https://forms.gle/kwmZWS4dqB4x4UDj9" target="blank">문의 하기</a>
+      <a class="btn btn-primary" href="#">Sign In</a>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx">
+          <h1 class="mb-5">강원도 꿈자람<br>아동급식 전자카드</h1>
+          <h4>대한민국의 미래를 디자인 합니다.</h4>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+
+  <section class="testimonials text-center bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <a href="info1.html" >
+                <img class="img-fluid rounded-circle mb-3" src="img/info.png" alt="">
+              </a>
+            <h5>가맹점 안내</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <a href="info2.html">
+                <img class="img-fluid rounded-circle mb-3" src="img/call.png" alt="">
+              </a>
+            <h5>상담센터</h5>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <a href="https://forms.gle/kwmZWS4dqB4x4UDj9" target="blank">
+              <img class="img-fluid rounded-circle mb-3" src="img/email.png" alt="">
+            </a>
+            <h5>문의하기</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Showcases -->
+  <section class="showcase">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>Fully Responsive Design</h2>
+          <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
+        <div class="col-lg-6 my-auto showcase-text">
+          <h2>Updated For Bootstrap 4</h2>
+          <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>Easy to Use &amp; Customize</h2>
+          <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Side -->
+  <div id=SIDEMENU>
+    <a href=#><img src="img/top.png" alt="sidemenu" ></a>
+  </div>
+  <div id=bot>
+    <a href="#" onclick="window.open('chatbot.html','윈도우판업','width=500, height=550, left=400, top=100')"><img src="img/chatbot.png" ></a>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>강원 꿈자람 카드 서비스::상담 센터</title>
+
+  <style>
+    table, td, th {
+        border: 1px solid #007bff;
+    }
+    table {        width: 100%;    }
+    th {
+        background-color: #007bff;
+        color: white;
+    }
+
+  </style>
+  <!-- sidemenu & chatbot CSS -->
+  <link href="css/indexstyle.css" rel="stylesheet" type="text/css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/landing-page.min.css" rel="stylesheet">
+
+  <!-- sidemenu -->
+  <script type="text/javascript">
+    var stmnLEFT = 10; // 오른쪽 여백
+    var stmnGAP1 = 0; // 위쪽 여백
+    var stmnGAP2 = 400; // 스크롤시 브라우저 위쪽과 떨어지는 거리
+    var stmnBASE = 400; // 스크롤 시작위치
+    var stmnActivateSpeed = 20; //스크롤을 인식하는 딜레이 (숫자가 클수록 느리게 인식)
+    var stmnScrollSpeed = 10; //스크롤 속도 (클수록 느림)
+    var stmnTimer;
+
+    function RefreshStaticMenu() {
+     var stmnStartPoint, stmnEndPoint;
+     stmnStartPoint = parseInt(document.getElementById('SIDEMENU').style.top, 10);
+     stmnEndPoint = Math.max(document.documentElement.scrollTop, document.body.scrollTop) + stmnGAP2;
+     if (stmnEndPoint < stmnGAP1) stmnEndPoint = stmnGAP1;
+     if (stmnStartPoint != stmnEndPoint) {
+      stmnScrollAmount = Math.ceil( Math.abs( stmnEndPoint - stmnStartPoint ) / 15 );
+      document.getElementById('SIDEMENU').style.top = parseInt(document.getElementById('SIDEMENU').style.top, 10) + ( ( stmnEndPoint<stmnStartPoint ) ? -stmnScrollAmount : stmnScrollAmount ) + 'px';
+      stmnRefreshTimer = stmnScrollSpeed;
+      }
+     stmnTimer = setTimeout("RefreshStaticMenu();", stmnActivateSpeed);
+     }
+    function InitializeStaticMenu() {
+     document.getElementById('SIDEMENU').style.right = stmnLEFT + 'px';  //처음에 오른쪽에 위치.
+     document.getElementById('SIDEMENU').style.top = document.body.scrollTop + stmnBASE + 'px';
+     RefreshStaticMenu();
+     }
+   </script>
+
+</head>
+
+<body onload="InitializeStaticMenu();">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="img/header-home.png" alt="home" ></a>
+      <a class="navbar-brand" href="#">꿈자람 카드</a>
+      <a class="navbar-brand" href="https://www.purmeecard.com" target="blank">잔액조회</a>
+      <a class="navbar-brand" href="info1.html">가맹점 안내</a>
+      <a class="navbar-brand" href="info2.html">상담 센터</a>
+      <a class="navbar-brand" href="https://forms.gle/kwmZWS4dqB4x4UDj9" target="blank">문의하기</a>
+      <a class="btn btn-primary" href="#">Sign In</a>
+    </div>
+  </nav>
+
+  <div class="snb_nav">
+      <div class="snb">
+          <div class="dep1">
+              <h2>상담센터</h2>
+          </div>
+      </div>
+  </div>
+
+<!-- Image Showcases -->
+<section class="showcase">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h1>강원도와 <br>청소년상담복지센터</h1>
+          <p class="lead mb-0">
+            강원도 내 청소년들의 상담, 긴급구조, 자립, 의료지원 등을 통해 건강한 자아성장을 목표로하며 학력기 아동과 부모에게 교육 및 복지 혜택 안내, 집중상담 지원</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials text-center bg-light">
+    <div id=container>
+      <table>
+        <caption></caption>
+        <colgroup>
+          <col style="width:10%;">
+          <col style="width:15%;">
+          <col style="width:20%;">
+          <col style="width:30%;">
+          <col style="width:25%;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>&nbsp;</th>
+            <th>기관명</th>
+            <th>전화번호<br></th>
+            <th>주소</th>
+            <th>사이트</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>청소년사이버상담센터</td>
+            <td>1388</td>
+            <td>부산광역시 해운대구 센텀중앙로79 센텀사이언스파크(7층~10층)</td>
+            <td><a href="https://www.cyber1388.kr:447/" target="blank">클릭</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>강원도청소년상담복지센터</td>
+            <td>256-2000(033)</td>
+            <td>강원도 춘천시 소양로 167 (소양로2가)</td>
+            <td><a href="http://www.gycc.org/gycc2016/gycc/index.php" target="blank">클릭</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>강릉청소년상담복지센터</td>
+            <td>655-1388(033)</td>
+            <td>강원도 강릉시 종합운동장길 72-21 강릉시청소년수련관2층</td>
+            <td><a href="http://gn1318.or.kr/index.php" target="blank">클릭</a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>원주청소년상담복지센터</td>
+            <td>744-1388(033)</td>
+            <td>강원도 원주시 서원대로 234, 청소년수련관 이음관 2층</td>
+            <td><a href="http://www.wonju1388.kr/" target="blank">클릭</a></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>철원청소년상담복지센터</td>
+            <td>450-4741(033)</td>
+            <td>강원도 철원군 갈말읍 명성로 139번길 52 청소년회관</td>
+            <td><a href="http://www.cwg.go.kr/site/youth/main.do" target="blank">클릭</a></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>영월청소년상담복지센터</td>
+            <td>375-1318(033)</td>
+            <td>강원도 영월군 영월읍 제방안길 100 영월군청소년상담복지센터</td>
+            <td><a href="https://www.kyw1318.or.kr/" target="blank">클릭</a></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>속초시청소년상담복지센터</td>
+            <td>638-1388(033)</td>
+            <td>강원 속초시 노학동 978</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>정선군청소년상담복지센터</td>
+            <td>591-1310(033)</td>
+            <td>강원도 정선군 사북읍 사북6길 12-6 (사북리, 사북청소년장학센터)</td>
+            <td><a href="http://ycwc.jsyouth.or.kr/" target="blank">클릭</a></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>동해시청소년상담복지센터</td>
+            <td>535-2797(033)</td>
+            <td>강원도 동해시 승지로 315(부곡동)</td>
+            <td><a href="http://yc.dh.go.kr/main/index.htm" target="blank">클릭</a></td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>태백시청소년상담복지센터</td>
+            <td>582-1387(033)</td>
+            <td>강원 태백시 동태백로 558 청소년장학센터</td>
+            <td><a href="http://www.tbyouth.or.kr/" target="blank">클릭</a></td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>홍천군청소년상담복지센터</td>
+            <td>433-1386(033)</td>
+            <td> 강원도 홍천군 읍 산림공원2길 31</td>
+            <td><a href="http://hcyc1388.org/" target="blank">클릭</a></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div id=SIDEMENU>
+    <a href=#><img src="img/top.png" alt="sidemenu" ></a>
+  </div>
+  <div id=bot>
+    <a href="#" onclick="window.open('chatbot.html','윈도우판업','width=500, height=550, left=400, top=100')"><img src="img/chatbot.png" ></a>
+  </div>
+
+<!-- Footer -->
+<footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
